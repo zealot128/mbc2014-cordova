@@ -1,5 +1,5 @@
-source :rubygems
+source "https://rubygems.org"
 
-gem "middleman", "~>3.0.5"
+gem "middleman"
 gem "pry"
 gem "rake"
