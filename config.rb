@@ -40,6 +40,15 @@ Haml::Template.options[:ugly] = true
 
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
+#
+helpers do
+  def highlight(&block)
+    text = capture_haml do
+      yield
+    end
+    "<code><pre class='prettyprint'>#{text.gsub('<', '&lt;')}</pre></code>"
+  end
+end
 
 # Methods defined in the helpers block are available in templates
 # helpers do

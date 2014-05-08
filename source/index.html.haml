@@ -17,12 +17,87 @@
     %h3 Cordova/Phonegap
   %section
     %h3 Ratchet
+
+%section
   %section
-    %h3 Angular
+    %h3 Angular.js
+    %ul
+      %li JS-Framework
+      %li von Google
   %section
     %h3 Middleman/Coffeescript/Sass
+    %ul
+      %li
+        Middleman: Buildtool für statische Websites
+        %small aus dem Rubyland (Alternativ: Yeoman)
+      %li
+        + Nutzung von alternativen Templatesprachen
+        %br
+        %small
+          Slim, Haml
+      %li
+        + .. JS/CSS Alternativen (CoffeeScript, Sass, ...)
+        %br
+        %small nicht Thema dieses Vortrags
   %section
     %h3 Serverseitige API
+
+  %section
+    %h3 Beispiel-Code (Sharing)
+
+    %ul
+      %li HTML View (Angular)
+      %li JS-Controller (Angular)
+      %li Cordova Interaktion
+  %section
+
+    = highlight do
+      :plain
+        <ul class="table-view" ng-if="job">
+          <li class="table-view-cell">
+            {{job.title}}
+          </li>
+          <li class="table-view-cell">
+            <p>
+              <button class="btn-block btn btn-small" ng-click="share()">
+                <span class="icon-share icon"></span>
+                <span>Teilen</span>
+              </button>
+            </p>
+          </li>
+        </ul>
+  %section
+    = highlight do
+      :plain
+        window.App = angular.module('ebmobile', ['ngRoute','ngResource','...'])
+        App.config(function($routeProvider) {
+          $routeProvider.when('/job/:jobId', {
+            templateUrl: 'html/job.html',
+            controller: 'JobController'
+          })
+        })
+  %section
+    = highlight do
+      :plain
+        App.controller('JobController', function($scope, Job, $routeParams) {
+          $scope.job = null;
+          Job.get({
+            id: $routeParams.jobId
+          }, function(data) {
+            $scope.job = data;
+          });
+          $scope.share = function() {
+            var message = {
+               subject: $scope.job.title,
+               url: $scope.job.url
+            };
+            window.socialmessage.send(message);
+          };
+        });
+
+
+
+
 %section
   %section
     %h2 App-Vorstellung
