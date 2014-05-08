@@ -35,7 +35,18 @@
     %h3 Angular.js
     %ul
       %li JS-Framework
-      %li von Google
+      %li seit 2009
+      %li Features: Dependency-Injection, 2-way-data-binding, MVC
+  %section
+    %h4 Warum Angular?
+    %ul
+      %li Ratchets Navigation nicht ausreichend
+      %li Angular: Reichhaltiges Ökosystem
+      %li
+        = link_to 'http://eviltrout.com/2013/06/15/ember-vs-angular.html' do
+          Angular vs. Ember
+        %br
+        %small Can.js, Backbone.js, jQuery mobile ebenfalls ausprobiert
   %section
     %h3 Middleman/Coffeescript/Sass
     %ul
@@ -51,16 +62,40 @@
         + .. JS/CSS Alternativen (CoffeeScript, Sass, ...)
         %br
         %small nicht Thema dieses Vortrags
+      %li
+        + Minification
   %section
     %h3 Serverseitige API
+    %p Interessante Apps sprechen i.d.R. mit einem Service
+    %p Im Vorfeld: Gedanken zur Authentifizierung
+  %section
+    %ul
+      %li
+        Dokumentation + Konventionen der API i.A. ("Restful", Hypermedia)
+        %small Grape/swagger &rarr; Dokumentation und Beispiele automatisch generieren
+      %li.fragment
+        Transportsicherheit
+        %br
+        %small https &rarr; Zertifikate
+      %li.fragment
+        API Calls public oder nur durch App verwendbar?
+        %br
+        %small Hartgegossener API-Key...
+      %li.fragment
+        Können sich Nutzer anmelden?  &rarr; Oauth2
+        %small Dann will man vielleicht keine Passwörter speichern sondern sich per oauth ein Token bauen
+      %li.fragment Rate-Limitations angebracht?
 
   %section
-    %h3 Beispiel-Code (Sharing)
-
-    %ul
-      %li HTML View (Angular)
-      %li JS-Controller (Angular)
-      %li Cordova Interaktion
+    %h3 Beispiel-Code
+    .column
+      = image_tag "angular-example.png"
+    .column
+      %p Beispiel: Share-Button auf einer Stellenanzeige
+      %ul
+        %li HTML View (Angular)
+        %li JS-Controller (Angular)
+        %li Cordova Interaktion
   %section
 
     = highlight do
@@ -118,26 +153,29 @@
     %h2 Conclusion
 
 %section
+  %h2 Shameless self-promotion
 
-  %ul.fa-ul(style='list-style-type: none')
-    %li
-      %span.fa.fa-github.fa-li
-      %a(href='https://github.com/pebra') pebra
-    %li
-      %span.fa.fa-twitter.fa-li
-      %a(href='https://twitter.com/pebrabb') @pebrabb
-    %li
-      %span.fa.fa-home.fa-li
-      %a(href='http://pebra.net') pebra.net
+  .column
+    %ul.fa-ul(style='list-style-type: none')
+      %li
+        %span.fa.fa-github.fa-li
+        %a(href='https://github.com/pebra') pebra
+      %li
+        %span.fa.fa-twitter.fa-li
+        %a(href='https://twitter.com/pebrabb') @pebrabb
+      %li
+        %span.fa.fa-home.fa-li
+        %a(href='http://pebra.net') pebra.net
+  .column
 
-  %ul.fa-ul(style='list-style-type: none')
-    %li
-      %span.fa.fa-github.fa-li
-      %a(href='https://github.com/zealot128') zealot128
-    %li
-      %span.fa.fa-twitter.fa-li
-      %a(href='https://twitter.com/stefanwienert') @stefanwienert
-    %li
-      %span.fa.fa-home.fa-li
-      %a(href='http://stefanwienert.de') stefanwienert.de
+    %ul.fa-ul(style='list-style-type: none')
+      %li
+        %span.fa.fa-github.fa-li
+        %a(href='https://github.com/zealot128') zealot128
+      %li
+        %span.fa.fa-twitter.fa-li
+        %a(href='https://twitter.com/stefanwienert') @stefanwienert
+      %li
+        %span.fa.fa-home.fa-li
+        %a(href='http://stefanwienert.de') stefanwienert.de
 
