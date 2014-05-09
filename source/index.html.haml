@@ -36,7 +36,7 @@
     %ul
       %li JS-Framework
       %li seit 2009
-      %li Features: Dependency-Injection, 2-way-data-binding, MVC
+      %li Features: Dependency-Injection, 2-way-data-binding, MVVC
   %section
     %h4 Warum Angular?
     %ul
@@ -141,6 +141,26 @@
             window.socialmessage.send(message);
           };
         });
+  %section
+    %h2 JavaScript FFI
+    = highlight do
+      :plain
+        SocialMessage.prototype.send = function (message) {
+            cordova.exec(null, null, "SocialMessage", "send", [message]);
+        };
+  %section
+    %h2 Java
+    = highlight do
+      :plain
+        // ...
+        public class SocialMessage extends CordovaPlugin {
+          @Override
+          public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+            // ...
+            final Intent sendIntent = new Intent(android.content.Intent.ACTION_SEND);
+            // ...
+            cordova.startActivityForResult(this, sendIntent, 0);
+        }
 
 
 
