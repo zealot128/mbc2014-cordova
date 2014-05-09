@@ -251,18 +251,23 @@
         %br
         %small Erfahrungen? Iconicframework?
   %section
-    %h2 Was nutzt Ihr?
-    %ul
-      %li Titanium
-      %li Iconicframework
-      %li AppGyver
-      %li Native
-      %li ...
+    .column
+      %h2 Was nutzt Ihr?
+      %ul
+        %li Titanium
+        %li Iconicframework
+        %li AppGyver
+        %li Native
+        %li ...
+    .column
+      = image_tag 'choices.jpg'
 
 %section
   %h2 Shameless self-promotion
 
   .column
+    = image_tag 'peter.jpg',  style: 'width: 150px'
+    %br
     %ul.fa-ul(style='list-style-type: none')
       %li
         %span.fa.fa-github.fa-li
@@ -274,7 +279,8 @@
         %span.fa.fa-home.fa-li
         %a(href='http://pebra.net') pebra.net
   .column
-
+    = image_tag 'stefan.jpg',  style: 'width: 150px'
+    %br
     %ul.fa-ul(style='list-style-type: none')
       %li
         %span.fa.fa-github.fa-li
