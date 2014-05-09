@@ -10,17 +10,56 @@
 %section
   %section
     %h2 Motivation
+
   %section
-    %ul
-      %li App als sinnvolle Ergänzung für den Nutzer
-      %li API bereits vorhanden
-      %li Interesse an Angular und Ember
+    %h2 Ausgangspunkt
+    %h4 Jobportal ohne mobile Ansicht
+
+  %section
+    %h3 App als sinnvolle Ergänzung für den Nutzer
 
   %section
     %ul
+      %li konkrete Jobangebote suchen
+      %li Jobs im Umkreis suchen
+      %li Merklisten erstellen und weiterleiten
+
+  %section
+    %h3 Ausgangspunkt
+    %ul
+      %li API für Suchanfragen bereits vorhanden
+      %li Interesse an AngularJS und EmberJS
+      %li begrenzte Ressourcen(Zeit, Personal)
+
+  %section
+    %h3 Entscheidung für Apache Cordova
+
+%section
+  %section
+    = image_tag "cordova.png", class: "no-border"
+
+  %section
+    %ul
+      %li aus Phonegap entstanden
+      %li Apache Projekt -> Open Source
+      %li Ist jetzt die Basis von Phonegap
+
+  %section
+    = image_tag "all_the_devices.jpg", class: "no-border"
+
+  %section
+    %ul
+      %li Android, iOS, OSX, Tizen
+      %li Windows, Phone 7/8, Ubuntu
+      %li WebOS, FirefoxOS, Blackberry
+
+  %section
+
+  %section
+    %ul
+      %li keine Kenntnisse des nativen Frameworks nötig(Android, iOS...)
       %li HTML, CSS, JS
-      %li keine Kenntnisse des nativen Frameworks nötig
-      %li mehrere Platformen unterstützen
+      %li gesamter Build-Prozess von der Kommandozeile möglich -> Automation
 
 %section
   %section
@@ -47,6 +86,22 @@
           Angular vs. Ember
         %br
         %small Can.js, Backbone.js, jQuery mobile ebenfalls ausprobiert
+
+%section
+  %section
+    %h2 Ratchet
+    = image_tag "ratchet.png", class: "no-border"
+  %section
+    %ul
+      %li Stylesheets nach dem Vorbild der iOS- und Android-Styles
+      %li unter anderem entwickelt von @fat -> Twitter Bootstrap
+      %li iOS Styles gut, Android ein bisschen sehr grau
+%section
+  %h2 weinre
+  = image_tag "weinre-demo.jpg", class: "no-border"
+
+
+%section
   %section
     %h3 Middleman/Coffeescript/Sass
     %ul
