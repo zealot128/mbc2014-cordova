@@ -41,7 +41,7 @@
   %section
     %ul
       %li aus Phonegap entstanden
-      %li Apache Projekt -> Open Source
+      %li Apache Projekt &rarr; Open Source
       %li Ist jetzt die Basis von Phonegap
 
   %section
@@ -59,7 +59,7 @@
     %ul
       %li keine Kenntnisse des nativen Frameworks nötig(Android, iOS...)
       %li HTML, CSS, JS
-      %li gesamter Build-Prozess von der Kommandozeile möglich -> Automation
+      %li gesamter Build-Prozess von der Kommandozeile möglich &rarr; Automation
 
 %section
   %section
@@ -73,9 +73,12 @@
   %section
     %h3 Angular.js
     %ul
-      %li JS-Framework
+      %li JS-Framework von Google
       %li seit 2009
-      %li Features: Dependency-Injection, 2-way-data-binding, MVVC
+      %li
+        Features:
+        %br
+        <abbr title='Dependency-Injection'>DI</abbr>, 2-way-data-binding, MVVC, HTML als Templating
   %section
     %h4 Warum Angular?
     %ul
@@ -85,7 +88,7 @@
         = link_to 'http://eviltrout.com/2013/06/15/ember-vs-angular.html' do
           Angular vs. Ember
         %br
-        %small Can.js, Backbone.js, jQuery mobile ebenfalls ausprobiert
+        %small Can.js, Backbone.js, jQuery Mobile ebenfalls ausprobiert
 
 %section
   %section
@@ -94,7 +97,7 @@
   %section
     %ul
       %li Stylesheets nach dem Vorbild der iOS- und Android-Styles
-      %li unter anderem entwickelt von @fat -> Twitter Bootstrap
+      %li unter anderem entwickelt von @fat &rarr; Twitter Bootstrap
       %li iOS Styles gut, Android ein bisschen sehr grau
 %section
   %h2 weinre
@@ -123,6 +126,7 @@
     %h3 Serverseitige API
     %p Interessante Apps sprechen i.d.R. mit einem Service
     %p Im Vorfeld: Gedanken zur Authentifizierung
+    %p AJAX &rarr; JSONP/CORS
   %section
     %ul
       %li
@@ -217,15 +221,41 @@
             cordova.startActivityForResult(this, sendIntent, 0);
         }
 
-
-
-
 %section
   %section
     %h2 App-Vorstellung
 %section
   %section
-    %h2 Conclusion
+    %h2 Next
+    %ul
+      %li Notifications via GCM/APN
+      %li iOS-App
+      %li Bugfixes in unbekannten Android Versionen
+  %section
+    %h2 Fazit
+    %ul
+      %li
+        +Angular und Cordova machen Spaß
+        %br
+        %small Reichhaltige und vertrautes Ökosysteme &ndash; Tools wie Weinre, Bower, Phantomjs zur Hand
+      %li.fragment
+        +Effektive Entwicklung
+        %br
+        %small ~600 Zeilen CoffeeScript Code, dank Weinre und einfachem Build leicht debugbar
+      %li.fragment
+        +/- Bekannte Limitierungen von Cordova
+        %br
+        %small Hintergrundaktivitäten
+      %li.fragment
+        \- Ratchet ausbaufähig, insbes. Quirks zwischen Android-Versionen
+        %br
+        %small Erfahrungen? Iconicframework?
+  %section
+    %h2 Alternativen?
+    %p Was meint Ihr?
+    %ul
+      %li Titanium
+      %li Iconicframework
 
 %section
   %h2 Shameless self-promotion
